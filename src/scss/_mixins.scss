@@ -1,0 +1,42 @@
+@mixin navigation{
+    font-weight: weight(h3);
+    font-size: 2em;
+}
+
+@mixin headline{
+    color: #fff;
+    font-weight: weight(h3);
+    font-size: 2.5em;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin clearfix{
+    &:after{ //code clears floats
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+@mixin mobile{
+    @media (max-width: $mobile) {
+        @content
+    }
+}
+
+// @mixin mQ($arg...){
+//     @if length($arg) == 1{
+//         @media screen and (max-width: nth($arg, 1)) {
+//             @content;
+//     }
+//     }
+//     @if length($arg) == 2{
+//         @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)){
+//             @content;
+//         }
+//     }
+// }

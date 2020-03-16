@@ -1,0 +1,29 @@
+figure{
+    width: 100%;
+    nav{
+        width: 540px;
+        height: 190px;
+        float: left;
+        text-align: right;
+    }
+    ul{
+        list-style-type: none;
+        margin-top: 95px;
+    }
+    li{
+        // width: (100% / 5);
+        display: inline;
+        font-size: 0.8em;
+        margin-right: 10px;
+        @include mobile{
+            width: 100%;
+        }
+    }
+    a{
+        text-decoration: none;
+        letter-spacing:-0.01em;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
